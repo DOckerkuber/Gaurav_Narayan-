@@ -1,0 +1,42 @@
+assingment for interview
+To create  3 container 
+
+
+1.Docker container that runs a simple "hello world" application
+dockerfile
+
+FROM ubuntu:20.04
+RUN apt update && apt install -y sbcl
+WORKDIR /usr/src
+
+commands to imlement
+#docker build -t myimage .
+#docker run -it --name container1  myimage /bin/bash
+
+2.Create a container that runs Nginx or apache to expose application
+dockerfile
+
+FROM httpd:2.4
+MAINTAINER gaurav <narayangaurav9@gmail.com>
+COPY index.html /usr/local/apache007/htdocs/
+EXPOSE 80
+commands to run
+#docker build -t apache007-app
+#docker run -d -p 8000:80 --name apache2-app apache007-app:latest
+
+3. Create a container that runs a database  (example : Postgres)
+dockerfile 
+
+FROM postgres
+ENV POSTGRES_PASSWORD docker
+ENV POSTGRES_DB world
+COPY world.sql /docker-entrypoint-initdb.d/
+ 
+commands
+#docker build -t my-postgres-db ./
+#docker run -d --name my-postgresdb-container -p 5432:5432 my-postgres-db
+
+
+
+Thanks & Regards ,
+Gaurav Narayan
