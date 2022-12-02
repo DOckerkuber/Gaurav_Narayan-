@@ -7,4 +7,4 @@ EXPOSE 80
 *******************************************************************
 commands to run
 #docker build -t apache007-app
-#docker run -d -p 8000:80 --name apache2-app apache007-app:latest
+#docker run -d -p 8000:80 --name apache007-app apache007-app:latest
