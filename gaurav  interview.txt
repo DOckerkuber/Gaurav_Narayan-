@@ -38,5 +38,4 @@ commands
 
 
 
-Thanks & Regards ,
-Gaurav Narayan
+
